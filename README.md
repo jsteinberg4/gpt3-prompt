@@ -16,7 +16,7 @@
 <div className="overview">
 	<center>
 		<h4>
-		A single-page webapp and supporting API for interacting with <a href="https://openai.com/api">OpenAI's GPT-3</a>* API.
+		A single-page ReactJS web-app and supporting Flask API for interacting with <a href="https://openai.com/api">OpenAI's GPT-3</a>* API.
 		</h4>
 		<p>
 		*This project is not endorsed, developed by, or otherwise affiliated with, OpenAI.
