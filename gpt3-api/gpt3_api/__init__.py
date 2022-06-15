@@ -5,7 +5,7 @@ import os
 from flask import Flask
 
 LOGGER = logging.getLogger(__name__)
-logging.basicConfig(filename=f"{__name__}.log", filemode='a+', level='DEBUG')
+#logging.basicConfig(filename=f"{__name__}.log", filemode='a+', level='DEBUG')
 
 # Load secrets in global scope
 if os.path.exists("api.properties") and os.path.isfile("api.properties"):
