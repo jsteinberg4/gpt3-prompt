@@ -1,6 +1,7 @@
 import React from 'react';
 
-import GptForm, { Result } from './index.js';
+import GptForm from './gptform.js';
+import Result from './result.js';
 
 
 class Page extends React.Component {
@@ -57,9 +58,3 @@ class Page extends React.Component {
 		);
 	}
 }
-
-function App() {
-	return <Page />
-}
-
-export default App;
