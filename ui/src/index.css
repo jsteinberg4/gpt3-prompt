@@ -1,6 +1,10 @@
 body {
-	font: 14px "Century Gothic", Futura, sans-serif;
+	font: 24px "Century Gothic", Futura, sans-serif;
 	margin: 20px;
+}
+
+.container-result {
+	background: #000;
 }
 
 ol, ul {
@@ -17,7 +21,11 @@ ol, ul {
 	margin-bottom: 10px;
 }
 
-.square {
+"separator" {
+	background: #000;
+}
+
+container {
 	background: #fff;
 	border: 1px solid #999;
 	float: left;

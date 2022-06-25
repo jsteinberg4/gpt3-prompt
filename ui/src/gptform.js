@@ -9,6 +9,7 @@ export default class GptForm extends React.Component {
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.props.handleSubmit;
 	}
 
 	handleChange(event) {
@@ -17,11 +18,11 @@ export default class GptForm extends React.Component {
 		});
 	}
 
+	// Unclear if need the <label>
 	render() {
 		return(
-			<form onSubmit={this.props.handleSubmit}>
+			<form onSubmit={this.handleSubmit}>
 				<label>
-					{"Say something to GPT-3: "}
 					<textarea type="text" value={this.state.value} 
 						onChange={this.handleChange}
 						onClick={() => {

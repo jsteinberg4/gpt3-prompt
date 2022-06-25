@@ -47,11 +47,14 @@ export default class Page extends React.Component {
 	render() {
 		return (
 			<div className='GptApp'>
-				<div className="container prompt">
+				<div className="header">
+					<h1>Say Hello!</h1>
+				</div>
+				<div className="container-prompt">
 					<GptForm handleSubmit={(e) => this.handleSubmit(e)} />
 				</div>
 				<div className="separator"><h1></h1></div>
-				<div className="container result">
+				<div className="container-result">
 					{ this.renderResult() }
 				</div>
 			</div>
