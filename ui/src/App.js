@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Page from './page.js';
+import Page from './page'
 
 function App() {
 	return <Page />

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import GptForm from './gptform.js';
-import Result from './result.js';
+import GptForm from './gptform';
+import Result from './result';
 
 
-class Page extends React.Component {
+export default class Page extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
