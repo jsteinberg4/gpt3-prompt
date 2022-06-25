@@ -26,8 +26,10 @@ export default class GptForm extends React.Component {
 						onChange={this.handleChange}
 						onClick={() => {
 							if (this.state.isNew) {
-								this.state.value = '';
-								this.setState({isNew: false});
+								this.setState({
+									value: '',
+									isNew: false,
+								});
 							}
 						}}
 					/>

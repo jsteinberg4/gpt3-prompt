@@ -1,4 +1,4 @@
-export function Result(props) {
+export default function Result(props) {
 	return (
 		<div className="result">
 			<div className="title">{"Result:\n"}</div>
