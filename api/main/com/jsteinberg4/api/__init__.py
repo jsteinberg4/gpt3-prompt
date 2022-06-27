@@ -4,16 +4,15 @@ import os
 
 from flask import Flask
 
+from com.jsteinberg4.api.gpt_controller import GptController
+
 LOGGER = logging.getLogger(__name__)
 #logging.basicConfig(filename=f"{__name__}.log", filemode='a+', level='DEBUG')
 
 # Load secrets in global scope
-if os.path.exists("api.properties") and os.path.isfile("api.properties"):
-        with open("api.properties") as file:
-            for line in file.readlines():
-                exec(line)
-else:
-    raise OSError("File does not exist: api.properties")
+SECRET_KEY = os.getenv("OPENAI_SECRET_KEY", None)
+if SECRET_KEY is None:
+    raise EnvironmentError("Missing API key in environment. Try running with `OPENAI_SECRET_KEY=<key> ...`")
 
 def create_app(test_config = None):
     # Create and configure app
@@ -36,8 +35,6 @@ def create_app(test_config = None):
     except OSError:
         pass
 
-    from gpt3_api.gpt3_routes import init_app
-    init_app(app)
-    exec("LOGGER.info('Loaded SECRET_KEY=%s' % SECRET_KEY)")
+    GptController.register(app)
 
     return app
