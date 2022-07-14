@@ -1,0 +1,3 @@
+FLASK_ENV=dev
+FLASK_APP=com.jsteinberg4.api
+OPENAI_SECRET_KEY="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"
